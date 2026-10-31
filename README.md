@@ -1,0 +1,1 @@
+The music player uses the supplied `Christina_Perri_-_A_Thousand_Years_CeeNaija.com_.mp3` track. To use another song, add it here and update `musicPath` in `script.js` and the audio source in `index.html`.

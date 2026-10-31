@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A magical birthday surprise for the love of my life."
+    />
+    <title>Magical Birthday Surprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-live="polite">
+      <div class="loader-bear">
+        <div class="bear-body"></div>
+        <div class="bear-ear bear-ear-left"></div>
+        <div class="bear-ear bear-ear-right"></div>
+        <div class="bear-eye bear-eye-left"></div>
+        <div class="bear-eye bear-eye-right"></div>
+        <div class="bear-nose"></div>
+      </div>
+      <p>Preparing your little magic...</p>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+
+    <div class="top-progress">
+      <span id="progressFill"></span>
+    </div>
+
+    <div class="floating-messages" id="floatingMessages"></div>
+
+    <button class="nav-btn nav-prev" id="prevBtn" type="button" aria-label="Previous section">
+      ←
+    </button>
+    <button class="nav-btn nav-next" id="nextBtn" type="button" aria-label="Next section">
+      →
+    </button>
+
+    <main class="page-shell">
+      <section class="panel active" id="hero" data-section>
+        <div class="sky-elements" aria-hidden="true">
+          <div class="moon"></div>
+          <div class="cloud cloud-one"></div>
+          <div class="cloud cloud-two"></div>
+          <div class="cloud cloud-three"></div>
+          <div class="sparkles"></div>
+          <div class="butterfly butterfly-one"></div>
+          <div class="butterfly butterfly-two"></div>
+          <div class="butterfly butterfly-three"></div>
+          <div class="floating-heart heart-one"></div>
+          <div class="floating-heart heart-two"></div>
+          <div class="floating-heart heart-three"></div>
+        </div>
+
+        <div class="content-wrap hero-wrap">
+          <div class="hero-copy">
+            <p class="eyebrow">HEY, SOMEONE SPECIAL... ❤️</p>
+            <h1>Your Magical Day Is Almost Here!</h1>
+            <p class="subtitle">
+              Someone as special as you deserves a day as beautiful as your heart.
+            </p>
+
+            <div class="countdown" aria-label="Birthday countdown">
+              <div class="time-box">
+                <span class="time-value" id="days">00</span>
+                <span class="time-label">Days</span>
+              </div>
+              <div class="time-box">
+                <span class="time-value" id="hours">00</span>
+                <span class="time-label">Hours</span>
+              </div>
+              <div class="time-box">
+                <span class="time-value" id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+              </div>
+              <div class="time-box">
+                <span class="time-value" id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+              </div>
+            </div>
+
+            <p class="countdown-note">Counting every second until your special day...</p>
+
+            <button class="primary-btn" type="button" data-scroll="story">
+              Open Your Little World ♡
+            </button>
+          </div>
+
+          <div class="hero-scene" aria-label="Sweet bunny and teddy">
+            <div class="scene-bunny">
+              <div class="bunny body"></div>
+              <div class="bunny ear left"></div>
+              <div class="bunny ear right"></div>
+              <div class="bunny eye left"></div>
+              <div class="bunny eye right"></div>
+              <div class="bunny nose"></div>
+              <div class="bunny heart"></div>
+            </div>
+            <div class="scene-teddy">
+              <div class="teddy-head"></div>
+              <div class="teddy-ear left"></div>
+              <div class="teddy-ear right"></div>
+              <div class="teddy-eye left"></div>
+              <div class="teddy-eye right"></div>
+              <div class="teddy-heart"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="story" data-section>
+        <div class="content-wrap story-wrap">
+          <p class="section-kicker">Once Upon A Time...</p>
+          <h2>Happy Birthday, My Love!</h2>
+
+          <div class="story-scene">
+            <div class="story-character boy" aria-label="Boy character">
+              <div class="person-head"></div>
+              <div class="person-body"></div>
+              <div class="person-arm left"></div>
+              <div class="person-arm right"></div>
+            </div>
+
+            <div class="dotted-path" aria-hidden="true">
+              <span class="travel-heart travel-heart-1"></span>
+              <span class="travel-heart travel-heart-2"></span>
+              <span class="travel-heart travel-heart-3"></span>
+            </div>
+
+            <div class="story-character girl" aria-label="Girl character">
+              <div class="person-head"></div>
+              <div class="person-body"></div>
+              <div class="person-arm left"></div>
+              <div class="person-arm right"></div>
+            </div>
+          </div>
+
+          <p class="story-text centered">
+            Two hearts, two different places, and one beautiful connection.
+          </p>
+          <p class="story-text soft">
+            Even though we cannot always be together, you are still a beautiful part of my everyday life.
+          </p>
+
+          <button class="primary-btn" type="button" data-scroll="letter">
+            Continue Our Story →
+          </button>
+        </div>
+      </section>
+
+      <section class="panel" id="letter" data-section>
+        <div class="content-wrap letter-wrap">
+          <p class="section-kicker">A Special Letter 💌</p>
+          <h2>Someone wrote something special for you...</h2>
+
+          <div class="envelope-scene" id="envelopeScene">
+            <div class="letter-teddy" aria-hidden="true">
+              <div class="teddy-head"></div>
+              <div class="teddy-ear left"></div>
+              <div class="teddy-ear right"></div>
+              <div class="teddy-eye left"></div>
+              <div class="teddy-eye right"></div>
+              <div class="teddy-heart"></div>
+            </div>
+            <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open birthday letter">
+              <div class="envelope-flap"></div>
+              <div class="seal"></div>
+            </div>
+          </div>
+
+          <article class="letter-card" id="letterCard">
+            <h3>To The Girl Who Makes My World Special ❤️</h3>
+            <div id="letterText"></div>
+          </article>
+
+          <button class="primary-btn" type="button" data-scroll="memories">
+            There's More For You ♡
+          </button>
+        </div>
+      </section>
+
+      <section class="panel" id="memories" data-section>
+        <div class="content-wrap memory-wrap">
+          <p class="section-kicker">A little something for Luichpa ♡</p>
+          <h2>Some Cute Collection For You!</h2>
+
+          <div class="gallery-grid" id="galleryGrid"></div>
+
+          <div class="memory-notes">
+            <h3>Little moments for Luichpa</h3>
+            <ul id="memoryList"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="gifts" data-section>
+        <div class="content-wrap gifts-wrap">
+          <p class="section-kicker">Short Notes For You 🎁</p>
+          <h2>Short Notes For You</h2>
+
+          <div class="gift-grid">
+            <button class="gift-box gift-sweet" type="button" data-gift="sweet" aria-label="Open sweet message gift">
+              <span class="gift-ribbon ribbon-one"></span>
+              <span class="gift-ribbon ribbon-two"></span>
+              <span class="gift-tag">Sweet Message</span>
+            </button>
+            <button class="gift-box gift-wish" type="button" data-gift="wish" aria-label="Open special wish gift">
+              <span class="gift-ribbon ribbon-one"></span>
+              <span class="gift-ribbon ribbon-two"></span>
+              <span class="gift-tag">Special Wish</span>
+            </button>
+            <button class="gift-box gift-secret" type="button" data-gift="secret" aria-label="Open secret message gift">
+              <span class="gift-ribbon ribbon-one"></span>
+              <span class="gift-ribbon ribbon-two"></span>
+              <span class="gift-tag">Secret Message</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="reasons" data-section>
+        <div class="content-wrap reasons-wrap">
+          <p class="section-kicker">Reasons You Are Special ❤️</p>
+          <h2>Little Things That Make You Special</h2>
+
+          <div class="reason-cards" id="reasonCards"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="birthday" data-section>
+        <div class="content-wrap birthday-wrap">
+          <p class="section-kicker">Birthday Celebration 🎂</p>
+          <div class="birthday-lock" id="birthdayLockState">
+            <div class="birthday-balloons" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h2>Once Again<br />Happy Birthday To You<br />My Love, Luichpa!</h2>
+            <p>My BachHi, this little celebration is just for you. ♡</p>
+            <button class="primary-btn birthday-click" id="birthdayClick" type="button">
+              Click Here
+            </button>
+          </div>
+
+          <div class="birthday-unlock hidden" id="birthdayUnlock">
+            <h2 id="birthdayTitle">HAPPY BIRTHDAY, LUICHPA! ❤️</h2>
+            <p class="birthday-subtitle" id="birthdaySubtitle">
+              Today, the world celebrates the day someone incredibly special was born — my BachHi.
+            </p>
+
+            <div class="cake-wrap">
+              <button class="cake-button" id="cakeButton" type="button" aria-label="Light birthday candles">
+                <div class="cake">
+                  <div class="cake-top"></div>
+                  <div class="candle candle-one"></div>
+                  <div class="candle candle-two"></div>
+                  <div class="candle candle-three"></div>
+                  <div class="flame flame-one"></div>
+                  <div class="flame flame-two"></div>
+                  <div class="flame flame-three"></div>
+                </div>
+              </button>
+            </div>
+
+            <div class="birthday-message" id="birthdayMessage">
+              I wish I could be beside you today, celebrating every little moment with you. But until that day comes, I hope this little surprise reminds you how special you are to me. May your new year be filled with happiness, beautiful memories, endless blessings, and everything your heart wishes for.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="finale" data-section>
+        <div class="finale-wrap">
+          <div class="moon final-moon"></div>
+          <div class="finale-characters" aria-hidden="true">
+            <div class="final-character left"></div>
+            <div class="final-character right"></div>
+            <div class="spark-heart"></div>
+          </div>
+
+          <div class="finale-copy">
+            <p class="section-kicker">Distance Means Nothing 💗</p>
+            <h2>Until We Meet Again...</h2>
+            <p>
+              Distance may keep us in different places, but it cannot erase the beautiful connection we share.
+            </p>
+            <p>
+              I don't know what every tomorrow will look like, but I hope they bring us closer to the moments we dream about.
+            </p>
+            <p>
+              Until then, take care of yourself, keep smiling, and never forget how special you are.
+            </p>
+            <p class="ending-line">Happy Birthday, My Love. ❤️</p>
+            <p class="final-message">YOU ARE MY FAVORITE PERSON, ALWAYS. ♡</p>
+
+            <button class="primary-btn" id="restartButton" type="button">
+              Read Our Story Again
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="music-player" aria-label="Music player">
+      <div class="music-meta">
+        <div class="music-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <strong>A Thousand Years</strong>
+          <small>Christina Perri</small>
+        </div>
+      </div>
+
+      <div class="music-controls">
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Play or pause music">
+          ▶
+        </button>
+        <input type="range" id="volumeControl" min="0" max="100" value="60" aria-label="Volume control" />
+      </div>
+
+      <audio id="bgMusic" loop preload="auto">
+        <source src="music/Christina_Perri_-_A_Thousand_Years_CeeNaija.com_.mp3" type="audio/mpeg" />
+      </audio>
+    </aside>
+  </body>
+</html>
